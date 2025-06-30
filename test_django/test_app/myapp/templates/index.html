@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="kor">
+    <head>
+        <meta charset="utf-8">
+        <title>Home page</title>
+    </head>
+    <body>
+        {% if youngest_teams %}
+            <ur>
+                {% for team in youngest_teams %}
+                    <li>{{ team.team_name }}</li>
+                {% endfor %}
+            </ur>
+        {% else %}
+            <p> no teams are available. </p>
+        {% endif %}
+    </body>
+</html>
